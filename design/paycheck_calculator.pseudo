@@ -8,20 +8,26 @@
 # Use clear indentation and ALLCAPS pseudocode keywords, such as GET (input),
 # PUT (output), LET (assignment), IF, ELSE, and ENDIF where they fit your design.
 
-START paycheck_calculator
+START
 
-    TODO: Obtain the required program input.
+    INPUT hoursWorked
 
-    IF TODO: Specify the condition for the applicable pay rule.
-        TODO: List the processing steps for the true decision path.
+    IF hoursWorked > 40 THEN
+
+        LET overtimeHours = hoursWorked - 40
+
+        LET regularPay = 40 * 20
+
+        LET overtimePay = overtimeHours * 30
+
+        LET paycheck = regularPay + overtimePay
+
     ELSE
-        TODO: List the processing steps for the false decision path.
-    ENDIF
 
-    TODO: Output the calculated weekly paycheck.
+        LET paycheck = hoursWorked * 20
 
-END paycheck_calculator
+    END IF
 
+    OUTPUT paycheck
 
-# === References ===
-# TODO: List outside sources or assistance you actually used, or delete this line.
+END
